@@ -1,0 +1,66 @@
+Template Name,Name,Creation date,Status,Type Of Communication Channel,Body
+,Health Screening,2024-04-09T11:36:16.398Z,true,WHATSAPP,"Dear {name},
+
+Good health starts with awareness. We're offering free health screenings for [specific screenings]. Don't miss this opportunity to prioritize your well-being. Schedule your appointment now and take charge of your health journey.
+Best wishes,
+
+Please fill this form = > {formURL}
+{organization}
+"
+,Appointment,2024-04-09T11:28:44.730Z,false,EMAIL,"Subject: Appointment Confirmation: [Date] at [Time]
+
+Dear [Recipient's Name],
+
+We are delighted to confirm your appointment with us on [Date] at [Time]. We look forward to meeting you and providing you with excellent service.
+
+Appointment Details:
+
+    Date: [Date]
+    Time: [Time]
+    Location: [Location]
+
+If you need to reschedule or have any questions, please feel free to contact us at [Your Contact Information].
+
+We appreciate your trust in us and are committed to ensuring your experience with us is positive and satisfactory.
+
+Please fill this form = > {formURL}
+
+Best regards,
+
+{organization}"
+,Vaccination,2024-04-09T11:36:02.469Z,true,SMS,"Hi {name},
+
+Vaccination is one of the most effective ways to prevent the spread of [disease]. Protect yourself, your loved ones, and your community by getting vaccinated. Let's work together to build immunity and keep everyone safe.
+
+Please fill this form = > {formURL}
+
+Regards,
+{organization}
+"
+,Awareness ,2024-04-09T11:34:26.376Z,true,WHATSAPP,"Dear {name},
+
+We're launching an awareness campaign to shed light on [medical condition] and its impact on individuals and families. Together, we can educate, support, and advocate for better understanding and resources. Join us in spreading awareness and making a difference.
+
+Please fill this form = > {formURL}
+
+Best regards,
+{organization}
+"
+,Clinical Trial Recruitment,2024-04-09T11:36:33.769Z,true,WHATSAPP,"Hello {name},
+
+Your participation in our clinical trial could make a difference in the lives of countless individuals. By joining our study, you'll contribute to groundbreaking medical research and potentially access innovative treatments. Together, let's move science forward and improve healthcare for all.
+
+Please fill this form = > {formURL}
+
+Regards,
+{organization}
+"
+,Preventive Care ,2024-04-09T11:35:47.733Z,false,EMAIL,"Hello {name},
+
+Your health matters! Regular check-ups are essential for preventing illnesses and maintaining well-being. Schedule your preventive care appointment today and take proactive steps toward a healthier future.
+
+Please fill this form = > {formURL}
+
+Warm regards,
+{organization}
+"
