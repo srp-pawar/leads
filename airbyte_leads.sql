@@ -1,6 +1,20 @@
 {"Age": "string", "Name": "string", "Email": "string", "Comments": "string", "Location": "string", "Phone Number": "string", "Campaign Name": "string",  "Advertisement Name": "string", "Advertisement Source": "string"}
+=================================
 
+    sudo -u postgres psql
+    
+=================================
+    
+    \dn   ==> list of schema 
 
+=================================
+
+    \c default ==> use database
+    
+=================================
+
+    \dt ==> list of tables 
+    
 =================================
 
 CREATE  OR REPLACE FUNCTION insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead_function()
