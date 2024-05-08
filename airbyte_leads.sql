@@ -21,8 +21,8 @@ CREATE  OR REPLACE FUNCTION insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead
 RETURNS TRIGGER AS
 $$
 BEGIN
-    INSERT INTO "workspace_1wgvd1injqtife6y4rvfbu3h5"."_lead" ("name", "age", "email","comments","location","phoneNumber","campaignName","advertisementName","advertisementSource")
-    VALUES (NEW."Name", NEW."Age", NEW."Email",NEW."Comments",NEW."Location",NEW."Phone_Number",NEW."Campaign_Name",NEW."Advertisement_Name",NEW."Advertisement_Source");
+    INSERT INTO "workspace_1wgvd1injqtife6y4rvfbu3h5"."_lead" ("name", "age", "email","comments","location","phoneNumber","campaignName","advertisementName","advertisementSource","gender")
+    VALUES (NEW."Name", NEW."Age", NEW."Email",NEW."Comments",NEW."Location",NEW."Phone_Number",NEW."Campaign_Name",NEW."Advertisement_Name",NEW."Advertisement_Source",NEW."Gender");
     RETURN NEW;
 END;
 $$
