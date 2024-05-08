@@ -1,3 +1,7 @@
+
+
+
+
 {"Age": "string", "Name": "string", "Email": "string", "Comments": "string", "Location": "string", "Phone Number": "string", "Campaign Name": "string",  "Advertisement Name": "string", "Advertisement Source": "string"}
 =================================
 
@@ -21,7 +25,7 @@ CREATE  OR REPLACE FUNCTION insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead
 RETURNS TRIGGER AS
 $$
 BEGIN
-    INSERT INTO "workspace_1wgvd1injqtife6y4rvfbu3h5"."_lead" ("name", "age", "email","comments","location","phoneNumber","campaignName","advertisementName","advertisementSource","gender")
+    INSERT INTO "workspace_1wgvd1injqtife6y4rvfbu3h5"."_lead" ("name", "age","email","comments","location","phoneNumber","campaignName","advertisementName","advertisementSource","gender")
     VALUES (NEW."Name", NEW."Age", NEW."Email",NEW."Comments",NEW."Location",NEW."Phone_Number",NEW."Campaign_Name",NEW."Advertisement_Name",NEW."Advertisement_Source",NEW."Gender");
     RETURN NEW;
 END;
@@ -30,10 +34,34 @@ LANGUAGE plpgsql;
 
 
 
+CREATE  OR REPLACE FUNCTION insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead_function()
+RETURNS TRIGGER AS
+$$
+BEGIN
+    INSERT INTO "workspace_1wgvd1injqtife6y4rvfbu3h5"."_lead" ("name", "age","email","comments","location","phoneNumber","campaignName","advertisementName","advertisementSource","gender")
+
+VALUES (
+            COALESCE(NEW."Name", ''), 
+            COALESCE(NEW."Age", ''), 
+            COALESCE(NEW."Email", ''), 
+            COALESCE(NEW."Comments", ''), 
+            COALESCE(NEW."Location", ''), 
+            COALESCE(NEW."Phone_Number", ''), 
+            COALESCE(NEW."Campaign_Name", ''), 
+            COALESCE(NEW."Advertisement_Name", ''), 
+            COALESCE(NEW."Advertisement_Source", ''), 
+            COALESCE(NEW."Gender", '')
+
+        );
+RETURN NEW;
+END;
+$$
+LANGUAGE plpgsql;
+
 =================================
 
 
-CREATE TRIGGER insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead
+CREATE OR REPLACE TRIGGER insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead
 AFTER INSERT ON "Leads"."leads" 
 FOR EACH ROW
 EXECUTE FUNCTION insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead_function();
