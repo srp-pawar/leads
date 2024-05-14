@@ -97,3 +97,37 @@ ORDER BY tgrelid;
 
 
 =================================
+
+
+CREATE OR REPLACE FUNCTION insert_into_workspace_1wgvd1injqtife6y4rvfbu3h5_lead_function()
+RETURNS TRIGGER AS
+$$
+BEGIN
+    -- Check if "Name" is not null
+    IF NEW."Name" IS NOT NULL THEN
+        -- Convert the gender value to the appropriate enum type
+
+            -- Insert the record into the _lead table
+            INSERT INTO "workspace_1wgvd1injqtife6y4rvfbu3h5"."_lead" ("name", "age", "email","comments","location","phoneNumber","campaignName","advertisementName","advertisementSource","gender")
+            VALUES (
+                NEW."Name", 
+                COALESCE(NEW."Age", ''), 
+                COALESCE(NEW."Email", ''), 
+                COALESCE(NEW."Comments", ''), 
+                COALESCE(NEW."Location", ''), 
+                COALESCE(NEW."Phone_Number", ''), 
+                COALESCE(NEW."Campaign_Name", ''), 
+                COALESCE(NEW."Advertisement_Name", ''), 
+                COALESCE(NEW."Advertisement_Source", ''), 
+                COALESCE(NEW."Gender", '')
+                
+            );
+    END IF;
+    RETURN NEW;
+END;
+$$
+LANGUAGE plpgsql;
+
+
+=================================
+
