@@ -1,7 +1,3 @@
-
-
-
-
 {"Age": "string", "Name": "string", "Email": "string", "Comments": "string", "Location": "string", "Phone Number": "string", "Campaign Name": "string",  "Advertisement Name": "string", "Advertisement Source": "string"}
 =================================
 
